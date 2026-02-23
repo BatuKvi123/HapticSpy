@@ -1,381 +1,578 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+-- Credits to simple spy for scheduler
 
--- Instances:
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
-local Converted = {
-	["_HapticSpy"] = Instance.new("ScreenGui");
-	["_Main"] = Instance.new("Frame");
-	["_UIStroke"] = Instance.new("UIStroke");
-	["_UIGradient"] = Instance.new("UIGradient");
-	["_spin"] = Instance.new("LocalScript");
-	["_title"] = Instance.new("TextLabel");
-	["_UIGradient1"] = Instance.new("UIGradient");
-	["_Remotes"] = Instance.new("Frame");
-	["_scroll"] = Instance.new("ScrollingFrame");
-	["_UIListLayout"] = Instance.new("UIListLayout");
-	["_Template"] = Instance.new("Frame");
-	["_divider"] = Instance.new("Frame");
-	["_rname"] = Instance.new("TextLabel");
-	["_click"] = Instance.new("TextButton");
-	["_UIPadding"] = Instance.new("UIPadding");
-	["_CodeFrame"] = Instance.new("Frame");
-	["_Buttons"] = Instance.new("Frame");
-	["_Run"] = Instance.new("TextButton");
-	["_UICorner"] = Instance.new("UICorner");
-	["_BlockN"] = Instance.new("TextButton");
-	["_UICorner1"] = Instance.new("UICorner");
-	["_BlockIns"] = Instance.new("TextButton");
-	["_UICorner2"] = Instance.new("UICorner");
-	["_Client"] = Instance.new("LocalScript");
-	["_RButtons"] = Instance.new("Frame");
-	["_Remotes1"] = Instance.new("TextButton");
-	["_LocalScript"] = Instance.new("LocalScript");
-	["_Blocks"] = Instance.new("TextButton");
-	["_LocalScript1"] = Instance.new("LocalScript");
-	["_Blocks1"] = Instance.new("Frame");
-	["_scroll1"] = Instance.new("ScrollingFrame");
-	["_UIListLayout1"] = Instance.new("UIListLayout");
-	["_Template1"] = Instance.new("Frame");
-	["_divider1"] = Instance.new("Frame");
-	["_rname1"] = Instance.new("TextLabel");
-	["_click1"] = Instance.new("TextButton");
-	["_UIPadding1"] = Instance.new("UIPadding");
-	["_LocalScript2"] = Instance.new("LocalScript");
-}
+-- Instances: 49 | Scripts: 5 | Modules: 0 | Tags: 0
+local G2L = {};
 
--- Properties:
-
-Converted["_HapticSpy"].IgnoreGuiInset = true
-Converted["_HapticSpy"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-Converted["_HapticSpy"].ResetOnSpawn = false
-Converted["_HapticSpy"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_HapticSpy"].Name = "HapticSpy"
-Converted["_HapticSpy"].Parent = game.Players.LocalPlayer.PlayerGui
-
-Converted["_Main"].BackgroundColor3 = Color3.fromRGB(18.000000827014446, 17.00000088661909, 29.000002071261406)
-Converted["_Main"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Main"].BorderSizePixel = 0
-Converted["_Main"].Position = UDim2.new(0.3075746, 0, 0.230891719, 0)
-Converted["_Main"].Size = UDim2.new(0, 502, 0, 338)
-Converted["_Main"].Name = "Main"
-Converted["_Main"].Parent = Converted["_HapticSpy"]
-
-Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke"].Thickness = 5
-Converted["_UIStroke"].Parent = Converted["_Main"]
-
-Converted["_UIGradient"].Color = ColorSequence.new{
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(145.00000655651093, 17.00000088661909, 0)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(5.000000176951289, 0, 136.00000709295273))
-}
-Converted["_UIGradient"].Parent = Converted["_UIStroke"]
-
-Converted["_title"].Font = Enum.Font.GothamBold
-Converted["_title"].Text = "Haptic Spy"
-Converted["_title"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_title"].TextScaled = true
-Converted["_title"].TextSize = 14
-Converted["_title"].TextWrapped = true
-Converted["_title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_title"].BackgroundTransparency = 1
-Converted["_title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_title"].BorderSizePixel = 0
-Converted["_title"].Position = UDim2.new(0.0276816618, 0, 0.027777778, 0)
-Converted["_title"].Size = UDim2.new(0, 116, 0, 30)
-Converted["_title"].Name = "title"
-Converted["_title"].Parent = Converted["_Main"]
-
-Converted["_UIGradient1"].Color = ColorSequence.new{
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(17.00000088661909, 26.000000350177288, 53.00000064074993)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))
-}
-Converted["_UIGradient1"].Parent = Converted["_Main"]
-
-Converted["_Remotes"].BackgroundColor3 = Color3.fromRGB(40.00000141561031, 40.00000141561031, 40.00000141561031)
-Converted["_Remotes"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Remotes"].BorderSizePixel = 0
-Converted["_Remotes"].Position = UDim2.new(0.027681632, 0, 0.335177898, 0)
-Converted["_Remotes"].Size = UDim2.new(0, 151, 0, 214)
-Converted["_Remotes"].Name = "Remotes"
-Converted["_Remotes"].Parent = Converted["_Main"]
-
-Converted["_scroll"].AutomaticCanvasSize = Enum.AutomaticSize.Y
-Converted["_scroll"].CanvasSize = UDim2.new(0, 0, 0, 0)
-Converted["_scroll"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_scroll"].ScrollBarThickness = 4
-Converted["_scroll"].Active = true
-Converted["_scroll"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_scroll"].BackgroundTransparency = 1
-Converted["_scroll"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_scroll"].BorderSizePixel = 0
-Converted["_scroll"].Size = UDim2.new(0, 151, 0, 214)
-Converted["_scroll"].Name = "scroll"
-Converted["_scroll"].Parent = Converted["_Remotes"]
-
-Converted["_UIListLayout"].Padding = UDim.new(0, 15)
-Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout"].Parent = Converted["_scroll"]
-
-Converted["_Template"].BackgroundColor3 = Color3.fromRGB(16.000000946223736, 16.000000946223736, 16.000000946223736)
-Converted["_Template"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Template"].BorderSizePixel = 0
-Converted["_Template"].Size = UDim2.new(0, 135, 0, 39)
-Converted["_Template"].Visible = false
-Converted["_Template"].Name = "Template"
-Converted["_Template"].Parent = Converted["_scroll"]
-
-Converted["_divider"].BackgroundColor3 = Color3.fromRGB(242.0000159740448, 255, 0)
-Converted["_divider"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_divider"].BorderSizePixel = 0
-Converted["_divider"].Size = UDim2.new(0, 135, 0, 2)
-Converted["_divider"].Name = "divider"
-Converted["_divider"].Parent = Converted["_Template"]
-
-Converted["_rname"].Font = Enum.Font.GothamBold
-Converted["_rname"].Text = "Haptic Spy Remote Logger"
-Converted["_rname"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_rname"].TextSize = 14
-Converted["_rname"].TextWrapped = true
-Converted["_rname"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_rname"].BackgroundTransparency = 1
-Converted["_rname"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_rname"].BorderSizePixel = 0
-Converted["_rname"].Position = UDim2.new(0, 0, 0.051282052, 0)
-Converted["_rname"].Size = UDim2.new(0, 135, 0, 37)
-Converted["_rname"].Name = "rname"
-Converted["_rname"].Parent = Converted["_Template"]
-
-Converted["_click"].Font = Enum.Font.SourceSans
-Converted["_click"].Text = ""
-Converted["_click"].TextColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_click"].TextSize = 14
-Converted["_click"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_click"].BackgroundTransparency = 1
-Converted["_click"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_click"].BorderSizePixel = 0
-Converted["_click"].Position = UDim2.new(0, 0, 0.051282052, 0)
-Converted["_click"].Size = UDim2.new(0, 135, 0, 37)
-Converted["_click"].Name = "click"
-Converted["_click"].Parent = Converted["_Template"]
-
-Converted["_UIPadding"].PaddingLeft = UDim.new(0, 7)
-Converted["_UIPadding"].PaddingTop = UDim.new(0, 10)
-Converted["_UIPadding"].Parent = Converted["_scroll"]
-
-Converted["_CodeFrame"].BackgroundColor3 = Color3.fromRGB(43.00000123679638, 43.00000123679638, 43.00000123679638)
-Converted["_CodeFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_CodeFrame"].BorderSizePixel = 0
-Converted["_CodeFrame"].Position = UDim2.new(0.352589637, 0, 0.162721887, 0)
-Converted["_CodeFrame"].Size = UDim2.new(0, 315, 0, 150)
-Converted["_CodeFrame"].Name = "CodeFrame"
-Converted["_CodeFrame"].Parent = Converted["_Main"]
-
-Converted["_Buttons"].BackgroundColor3 = Color3.fromRGB(43.00000123679638, 43.00000123679638, 43.00000123679638)
-Converted["_Buttons"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Buttons"].BorderSizePixel = 0
-Converted["_Buttons"].Position = UDim2.new(0.352589637, 0, 0.639053226, 0)
-Converted["_Buttons"].Size = UDim2.new(0, 315, 0, 111)
-Converted["_Buttons"].Name = "Buttons"
-Converted["_Buttons"].Parent = Converted["_Main"]
-
-Converted["_Run"].Font = Enum.Font.GothamBold
-Converted["_Run"].Text = "Run"
-Converted["_Run"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Run"].TextScaled = true
-Converted["_Run"].TextSize = 14
-Converted["_Run"].TextWrapped = true
-Converted["_Run"].BackgroundColor3 = Color3.fromRGB(13.00000112503767, 13.00000112503767, 13.00000112503767)
-Converted["_Run"].BackgroundTransparency = 0.5
-Converted["_Run"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Run"].BorderSizePixel = 0
-Converted["_Run"].Position = UDim2.new(0.0634920672, 0, 0.0540540554, 0)
-Converted["_Run"].Size = UDim2.new(0, 85, 0, 33)
-Converted["_Run"].Name = "Run"
-Converted["_Run"].Parent = Converted["_Buttons"]
-
-Converted["_UICorner"].Parent = Converted["_Run"]
-
-Converted["_BlockN"].Font = Enum.Font.GothamBold
-Converted["_BlockN"].Text = "Block [N]"
-Converted["_BlockN"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_BlockN"].TextScaled = true
-Converted["_BlockN"].TextSize = 14
-Converted["_BlockN"].TextWrapped = true
-Converted["_BlockN"].BackgroundColor3 = Color3.fromRGB(13.00000112503767, 13.00000112503767, 13.00000112503767)
-Converted["_BlockN"].BackgroundTransparency = 0.5
-Converted["_BlockN"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_BlockN"].BorderSizePixel = 0
-Converted["_BlockN"].Position = UDim2.new(0.36190477, 0, 0.0540540554, 0)
-Converted["_BlockN"].Size = UDim2.new(0, 85, 0, 33)
-Converted["_BlockN"].Name = "BlockN"
-Converted["_BlockN"].Parent = Converted["_Buttons"]
-
-Converted["_UICorner1"].Parent = Converted["_BlockN"]
-
-Converted["_BlockIns"].Font = Enum.Font.GothamBold
-Converted["_BlockIns"].Text = "Block [Ins]"
-Converted["_BlockIns"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_BlockIns"].TextScaled = true
-Converted["_BlockIns"].TextSize = 14
-Converted["_BlockIns"].TextWrapped = true
-Converted["_BlockIns"].BackgroundColor3 = Color3.fromRGB(13.00000112503767, 13.00000112503767, 13.00000112503767)
-Converted["_BlockIns"].BackgroundTransparency = 0.5
-Converted["_BlockIns"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_BlockIns"].BorderSizePixel = 0
-Converted["_BlockIns"].Position = UDim2.new(0.666666687, 0, 0.0540540554, 0)
-Converted["_BlockIns"].Size = UDim2.new(0, 85, 0, 33)
-Converted["_BlockIns"].Name = "BlockIns"
-Converted["_BlockIns"].Parent = Converted["_Buttons"]
-
-Converted["_UICorner2"].Parent = Converted["_BlockIns"]
-
-Converted["_RButtons"].BackgroundColor3 = Color3.fromRGB(40.00000141561031, 40.00000141561031, 40.00000141561031)
-Converted["_RButtons"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_RButtons"].BorderSizePixel = 0
-Converted["_RButtons"].Position = UDim2.new(0.0258964151, 0, 0.162721887, 0)
-Converted["_RButtons"].Size = UDim2.new(0, 151, 0, 48)
-Converted["_RButtons"].Name = "RButtons"
-Converted["_RButtons"].Parent = Converted["_Main"]
-
-Converted["_Remotes1"].Font = Enum.Font.GothamBold
-Converted["_Remotes1"].Text = "Remotes"
-Converted["_Remotes1"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Remotes1"].TextSize = 14
-Converted["_Remotes1"].BackgroundColor3 = Color3.fromRGB(26.00000225007534, 26.00000225007534, 26.00000225007534)
-Converted["_Remotes1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Remotes1"].BorderSizePixel = 0
-Converted["_Remotes1"].Position = UDim2.new(0.0463576168, 0, 0.1875, 0)
-Converted["_Remotes1"].Size = UDim2.new(0, 61, 0, 30)
-Converted["_Remotes1"].Name = "Remotes"
-Converted["_Remotes1"].Parent = Converted["_RButtons"]
-
-Converted["_Blocks"].Font = Enum.Font.GothamBold
-Converted["_Blocks"].Text = "Blocks"
-Converted["_Blocks"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Blocks"].TextSize = 14
-Converted["_Blocks"].BackgroundColor3 = Color3.fromRGB(26.00000225007534, 26.00000225007534, 26.00000225007534)
-Converted["_Blocks"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Blocks"].BorderSizePixel = 0
-Converted["_Blocks"].Position = UDim2.new(0.523178816, 0, 0.1875, 0)
-Converted["_Blocks"].Size = UDim2.new(0, 61, 0, 30)
-Converted["_Blocks"].Name = "Blocks"
-Converted["_Blocks"].Parent = Converted["_RButtons"]
-
-Converted["_Blocks1"].BackgroundColor3 = Color3.fromRGB(40.00000141561031, 40.00000141561031, 40.00000141561031)
-Converted["_Blocks1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Blocks1"].BorderSizePixel = 0
-Converted["_Blocks1"].Position = UDim2.new(0.027681632, 0, 0.335177898, 0)
-Converted["_Blocks1"].Size = UDim2.new(0, 151, 0, 214)
-Converted["_Blocks1"].Visible = false
-Converted["_Blocks1"].Name = "Blocks"
-Converted["_Blocks1"].Parent = Converted["_Main"]
-
-Converted["_scroll1"].AutomaticCanvasSize = Enum.AutomaticSize.Y
-Converted["_scroll1"].CanvasSize = UDim2.new(0, 0, 0, 0)
-Converted["_scroll1"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_scroll1"].ScrollBarThickness = 4
-Converted["_scroll1"].Active = true
-Converted["_scroll1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_scroll1"].BackgroundTransparency = 1
-Converted["_scroll1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_scroll1"].BorderSizePixel = 0
-Converted["_scroll1"].Size = UDim2.new(0, 151, 0, 214)
-Converted["_scroll1"].Name = "scroll"
-Converted["_scroll1"].Parent = Converted["_Blocks1"]
-
-Converted["_UIListLayout1"].Padding = UDim.new(0, 15)
-Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout1"].Parent = Converted["_scroll1"]
-
-Converted["_Template1"].BackgroundColor3 = Color3.fromRGB(16.000000946223736, 16.000000946223736, 16.000000946223736)
-Converted["_Template1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Template1"].BorderSizePixel = 0
-Converted["_Template1"].Size = UDim2.new(0, 135, 0, 64)
-Converted["_Template1"].Visible = false
-Converted["_Template1"].Name = "Template"
-Converted["_Template1"].Parent = Converted["_scroll1"]
-
-Converted["_divider1"].BackgroundColor3 = Color3.fromRGB(242.0000159740448, 255, 0)
-Converted["_divider1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_divider1"].BorderSizePixel = 0
-Converted["_divider1"].Size = UDim2.new(0, 135, 0, 2)
-Converted["_divider1"].Name = "divider"
-Converted["_divider1"].Parent = Converted["_Template1"]
-
-Converted["_rname1"].Font = Enum.Font.GothamBold
-Converted["_rname1"].Text = "Haptic Spy Remote Logger"
-Converted["_rname1"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_rname1"].TextSize = 14
-Converted["_rname1"].TextWrapped = true
-Converted["_rname1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_rname1"].BackgroundTransparency = 1
-Converted["_rname1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_rname1"].BorderSizePixel = 0
-Converted["_rname1"].Position = UDim2.new(0, 0, 0.0512820743, 0)
-Converted["_rname1"].Size = UDim2.new(0, 135, 0, 31)
-Converted["_rname1"].Name = "rname"
-Converted["_rname1"].Parent = Converted["_Template1"]
-
-Converted["_click1"].Font = Enum.Font.GothamBold
-Converted["_click1"].Text = "Unblock [Tag]"
-Converted["_click1"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_click1"].TextScaled = true
-Converted["_click1"].TextSize = 21
-Converted["_click1"].TextWrapped = true
-Converted["_click1"].BackgroundColor3 = Color3.fromRGB(85.0000025331974, 85.0000025331974, 85.0000025331974)
-Converted["_click1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_click1"].BorderSizePixel = 0
-Converted["_click1"].Position = UDim2.new(0, 0, 0.645031929, 0)
-Converted["_click1"].Size = UDim2.new(0, 135, 0, 22)
-Converted["_click1"].Name = "click"
-Converted["_click1"].Parent = Converted["_Template1"]
-
-Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 7)
-Converted["_UIPadding1"].PaddingTop = UDim.new(0, 10)
-Converted["_UIPadding1"].Parent = Converted["_scroll1"]
-
--- Fake Module Scripts:
-
-local fake_module_scripts = {}
+-- StarterGui.HapticSpy
+G2L["1"] = Instance.new("ScreenGui", gethui());
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[HapticSpy]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
--- Fake Local Scripts:
+-- StarterGui.HapticSpy.Main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(19, 18, 30);
+G2L["2"]["Size"] = UDim2.new(0, 502, 0, 338);
+G2L["2"]["Position"] = UDim2.new(0.30757, 0, 0.23089, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Main]];
 
-local function JXATQN_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.UIStroke.UIGradient.spin
-    local script = Instance.new("LocalScript")
-    script.Name = "spin"
-    script.Parent = Converted["_UIGradient"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
 
+-- StarterGui.HapticSpy.Main.UIStroke
+G2L["3"] = Instance.new("UIStroke", G2L["2"]);
+G2L["3"]["Thickness"] = 5;
+G2L["3"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.HapticSpy.Main.UIStroke.UIGradient
+G2L["4"] = Instance.new("UIGradient", G2L["3"]);
+G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(146, 18, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(6, 0, 137))};
+
+
+-- StarterGui.HapticSpy.Main.UIStroke.UIGradient.spin
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+G2L["5"]["Name"] = [[spin]];
+
+
+-- StarterGui.HapticSpy.Main.title
+G2L["6"] = Instance.new("TextLabel", G2L["2"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextScaled"] = true;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["BackgroundTransparency"] = 1;
+G2L["6"]["Size"] = UDim2.new(0, 116, 0, 30);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Haptic Spy]];
+G2L["6"]["Name"] = [[title]];
+G2L["6"]["Position"] = UDim2.new(0.02768, 0, 0.02778, 0);
+
+
+-- StarterGui.HapticSpy.Main.UIGradient
+G2L["7"] = Instance.new("UIGradient", G2L["2"]);
+G2L["7"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(18, 27, 54)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.HapticSpy.Main.Remotes
+G2L["8"] = Instance.new("Frame", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["8"]["Size"] = UDim2.new(0, 151, 0, 183);
+G2L["8"]["Position"] = UDim2.new(0.02768, 0, 0.33518, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[Remotes]];
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll
+G2L["9"] = Instance.new("ScrollingFrame", G2L["8"]);
+G2L["9"]["Active"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["9"]["Name"] = [[scroll]];
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["9"]["Size"] = UDim2.new(0, 151, 0, 214);
+G2L["9"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["ScrollBarThickness"] = 4;
+G2L["9"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll.UIListLayout
+G2L["a"] = Instance.new("UIListLayout", G2L["9"]);
+G2L["a"]["Padding"] = UDim.new(0, 15);
+G2L["a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll.Template
+G2L["b"] = Instance.new("Frame", G2L["9"]);
+G2L["b"]["Visible"] = false;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
+G2L["b"]["Size"] = UDim2.new(0, 135, 0, 39);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Name"] = [[Template]];
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll.Template.divider
+G2L["c"] = Instance.new("Frame", G2L["b"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(243, 255, 0);
+G2L["c"]["Size"] = UDim2.new(0, 135, 0, 2);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Name"] = [[divider]];
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll.Template.rname
+G2L["d"] = Instance.new("TextLabel", G2L["b"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundTransparency"] = 1;
+G2L["d"]["Size"] = UDim2.new(0, 135, 0, 37);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[Haptic Spy Remote Logger]];
+G2L["d"]["Name"] = [[rname]];
+G2L["d"]["Position"] = UDim2.new(0, 0, 0.05128, 0);
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll.Template.click
+G2L["e"] = Instance.new("TextButton", G2L["b"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Size"] = UDim2.new(0, 135, 0, 37);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[]];
+G2L["e"]["Name"] = [[click]];
+G2L["e"]["Position"] = UDim2.new(0, 0, 0.05128, 0);
+
+
+-- StarterGui.HapticSpy.Main.Remotes.scroll.UIPadding
+G2L["f"] = Instance.new("UIPadding", G2L["9"]);
+G2L["f"]["PaddingTop"] = UDim.new(0, 10);
+G2L["f"]["PaddingLeft"] = UDim.new(0, 7);
+
+
+-- StarterGui.HapticSpy.Main.CodeFrame
+G2L["10"] = Instance.new("Frame", G2L["2"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["10"]["Size"] = UDim2.new(0, 220, 0, 150);
+G2L["10"]["Position"] = UDim2.new(0.35259, 0, 0.16272, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Name"] = [[CodeFrame]];
+
+
+-- StarterGui.HapticSpy.Main.Buttons
+G2L["11"] = Instance.new("Frame", G2L["2"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["11"]["Size"] = UDim2.new(0, 315, 0, 111);
+G2L["11"]["Position"] = UDim2.new(0.35259, 0, 0.63905, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Name"] = [[Buttons]];
+
+
+-- StarterGui.HapticSpy.Main.Buttons.Run
+G2L["12"] = Instance.new("TextButton", G2L["11"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12"]["BackgroundTransparency"] = 0.5;
+G2L["12"]["Size"] = UDim2.new(0, 85, 0, 33);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Run]];
+G2L["12"]["Name"] = [[Run]];
+G2L["12"]["Position"] = UDim2.new(0.06349, 0, 0.05405, 0);
+
+
+-- StarterGui.HapticSpy.Main.Buttons.Run.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+
+
+
+-- StarterGui.HapticSpy.Main.Buttons.BlockN
+G2L["14"] = Instance.new("TextButton", G2L["11"]);
+G2L["14"]["TextWrapped"] = true;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextScaled"] = true;
+G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["14"]["BackgroundTransparency"] = 0.5;
+G2L["14"]["Size"] = UDim2.new(0, 85, 0, 33);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[Block N]];
+G2L["14"]["Name"] = [[BlockN]];
+G2L["14"]["Position"] = UDim2.new(0.3619, 0, 0.05405, 0);
+
+
+-- StarterGui.HapticSpy.Main.Buttons.BlockN.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["14"]);
+
+
+
+-- StarterGui.HapticSpy.Main.Buttons.BlockIns
+G2L["16"] = Instance.new("TextButton", G2L["11"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["16"]["BackgroundTransparency"] = 0.5;
+G2L["16"]["Size"] = UDim2.new(0, 85, 0, 33);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[Block Ins]];
+G2L["16"]["Name"] = [[BlockIns]];
+G2L["16"]["Position"] = UDim2.new(0.66667, 0, 0.05405, 0);
+
+
+-- StarterGui.HapticSpy.Main.Buttons.BlockIns.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["16"]);
+
+
+
+-- StarterGui.HapticSpy.Main.Buttons.ClearLogs
+G2L["18"] = Instance.new("TextButton", G2L["11"]);
+G2L["18"]["TextWrapped"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextScaled"] = true;
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["18"]["BackgroundTransparency"] = 0.5;
+G2L["18"]["Size"] = UDim2.new(0, 85, 0, 33);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[Clear Logs]];
+G2L["18"]["Name"] = [[ClearLogs]];
+G2L["18"]["Position"] = UDim2.new(0.06349, 0, 0.43243, 0);
+
+
+-- StarterGui.HapticSpy.Main.Buttons.ClearLogs.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+
+
+
+-- StarterGui.HapticSpy.Main.RButtons
+G2L["1a"] = Instance.new("Frame", G2L["2"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["1a"]["Size"] = UDim2.new(0, 151, 0, 48);
+G2L["1a"]["Position"] = UDim2.new(0.0259, 0, 0.16272, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[RButtons]];
+
+
+-- StarterGui.HapticSpy.Main.RButtons.Remotes
+G2L["1b"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1b"]["Size"] = UDim2.new(0, 61, 0, 30);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[Remotes]];
+G2L["1b"]["Name"] = [[Remotes]];
+G2L["1b"]["Position"] = UDim2.new(0.04636, 0, 0.1875, 0);
+
+
+-- StarterGui.HapticSpy.Main.RButtons.Remotes.LocalScript
+G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+
+
+
+-- StarterGui.HapticSpy.Main.RButtons.Blocks
+G2L["1d"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1d"]["Size"] = UDim2.new(0, 61, 0, 30);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Blocks]];
+G2L["1d"]["Name"] = [[Blocks]];
+G2L["1d"]["Position"] = UDim2.new(0.53642, 0, 0.1875, 0);
+
+
+-- StarterGui.HapticSpy.Main.RButtons.Blocks.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1d"]);
+
+
+
+-- StarterGui.HapticSpy.Main.Blocks
+G2L["1f"] = Instance.new("Frame", G2L["2"]);
+G2L["1f"]["Visible"] = false;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["1f"]["Size"] = UDim2.new(0, 151, 0, 214);
+G2L["1f"]["Position"] = UDim2.new(0.02768, 0, 0.33518, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Name"] = [[Blocks]];
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll
+G2L["20"] = Instance.new("ScrollingFrame", G2L["1f"]);
+G2L["20"]["Active"] = true;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["20"]["Name"] = [[scroll]];
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["20"]["Size"] = UDim2.new(0, 151, 0, 214);
+G2L["20"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["ScrollBarThickness"] = 4;
+G2L["20"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll.UIListLayout
+G2L["21"] = Instance.new("UIListLayout", G2L["20"]);
+G2L["21"]["Padding"] = UDim.new(0, 15);
+G2L["21"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll.Template
+G2L["22"] = Instance.new("Frame", G2L["20"]);
+G2L["22"]["Visible"] = false;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
+G2L["22"]["Size"] = UDim2.new(0, 135, 0, 64);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Name"] = [[Template]];
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll.Template.divider
+G2L["23"] = Instance.new("Frame", G2L["22"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(243, 255, 0);
+G2L["23"]["Size"] = UDim2.new(0, 135, 0, 2);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Name"] = [[divider]];
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll.Template.rname
+G2L["24"] = Instance.new("TextLabel", G2L["22"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Size"] = UDim2.new(0, 135, 0, 31);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[Haptic Spy Remote Logger]];
+G2L["24"]["Name"] = [[rname]];
+G2L["24"]["Position"] = UDim2.new(0, 0, 0.05128, 0);
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll.Template.click
+G2L["25"] = Instance.new("TextButton", G2L["22"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 21;
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(86, 86, 86);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["25"]["Size"] = UDim2.new(0, 135, 0, 22);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[Unblock Tag]];
+G2L["25"]["Name"] = [[click]];
+G2L["25"]["Position"] = UDim2.new(0, 0, 0.64503, 0);
+
+
+-- StarterGui.HapticSpy.Main.Blocks.scroll.UIPadding
+G2L["26"] = Instance.new("UIPadding", G2L["20"]);
+G2L["26"]["PaddingTop"] = UDim.new(0, 10);
+G2L["26"]["PaddingLeft"] = UDim.new(0, 7);
+
+
+-- StarterGui.HapticSpy.Main.LocalScript
+G2L["27"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter
+G2L["28"] = Instance.new("Frame", G2L["2"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["28"]["Size"] = UDim2.new(0, 88, 0, 150);
+G2L["28"]["Position"] = UDim2.new(0.80478, 0, 0.16272, 0);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Name"] = [[ArgumentSetter]];
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll
+G2L["29"] = Instance.new("ScrollingFrame", G2L["28"]);
+G2L["29"]["Active"] = true;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["29"]["Name"] = [[scroll]];
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["29"]["Size"] = UDim2.new(0, 88, 0, 150);
+G2L["29"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["ScrollBarThickness"] = 4;
+G2L["29"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll.UIListLayout
+G2L["2a"] = Instance.new("UIListLayout", G2L["29"]);
+G2L["2a"]["Padding"] = UDim.new(0, 10);
+G2L["2a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll.Template
+G2L["2b"] = Instance.new("Frame", G2L["29"]);
+G2L["2b"]["Visible"] = false;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
+G2L["2b"]["Size"] = UDim2.new(0, 82, 0, 60);
+G2L["2b"]["Position"] = UDim2.new(0, 0, -0.00714, 0);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Name"] = [[Template]];
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll.Template.divider
+G2L["2c"] = Instance.new("Frame", G2L["2b"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(252, 255, 0);
+G2L["2c"]["Size"] = UDim2.new(0, 82, 0, 2);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Name"] = [[divider]];
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll.Template.input
+G2L["2d"] = Instance.new("TextBox", G2L["2b"]);
+G2L["2d"]["CursorPosition"] = -1;
+G2L["2d"]["Name"] = [[input]];
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["TextSize"] = 14;
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2d"]["PlaceholderText"] = [[1]];
+G2L["2d"]["Size"] = UDim2.new(0, 68, 0, 24);
+G2L["2d"]["Position"] = UDim2.new(0.07317, 0, 0.17241, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[]];
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll.Template.type
+G2L["2e"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextScaled"] = true;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(0, 68, 0, 20);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[CFrame]];
+G2L["2e"]["Name"] = [[type]];
+G2L["2e"]["Position"] = UDim2.new(0.08537, 0, 0.63333, 0);
+
+
+-- StarterGui.HapticSpy.Main.ArgumentSetter.scroll.UIPadding
+G2L["2f"] = Instance.new("UIPadding", G2L["29"]);
+G2L["2f"]["PaddingTop"] = UDim.new(0, 10);
+G2L["2f"]["PaddingLeft"] = UDim.new(0, 3);
+
+
+-- StarterGui.HapticSpy.Main.Client
+G2L["30"] = Instance.new("LocalScript", G2L["2"]);
+G2L["30"]["Name"] = [[Client]];
+
+
+-- StarterGui.HapticSpy.Main.State
+G2L["31"] = Instance.new("TextButton", G2L["2"]);
+G2L["31"]["TextWrapped"] = true;
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["TextSize"] = 14;
+G2L["31"]["TextScaled"] = true;
+G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(0, 126, 0);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["31"]["Size"] = UDim2.new(0, 151, 0, 24);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Text"] = [[Running]];
+G2L["31"]["Name"] = [[State]];
+G2L["31"]["Position"] = UDim2.new(0.0259, 0, 0.89645, 0);
+
+
+-- StarterGui.HapticSpy.Main.UIStroke.UIGradient.spin
+local function C_5()
+local script = G2L["5"];
 	game:GetService("RunService").RenderStepped:Connect(function(dt)
 		script.Parent.Rotation = (script.Parent.Rotation + 90 * dt) % 360 -- 90 is speed
 	end)
-end
-local function GFFOIP_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.Client
-    local script = Instance.new("LocalScript")
-    script.Name = "Client"
-    script.Parent = Converted["_Main"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
+end;
+task.spawn(C_5);
+-- StarterGui.HapticSpy.Main.RButtons.Remotes.LocalScript
+local function C_1c()
+local script = G2L["1c"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Remotes.Visible = true
+		script.Parent.Parent.Parent.Blocks.Visible = false
+	end)
+end;
+task.spawn(C_1c);
+-- StarterGui.HapticSpy.Main.RButtons.Blocks.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Blocks.Visible = true
+		script.Parent.Parent.Parent.Remotes.Visible = false
+	end)
+end;
+task.spawn(C_1e);
+-- StarterGui.HapticSpy.Main.LocalScript
+local function C_27()
+local script = G2L["27"];
+	script.Parent.Active = true
+	script.Parent.Selectable = true
+	script.Parent.Draggable = true
+end;
+task.spawn(C_27);
+-- StarterGui.HapticSpy.Main.Client
+local function C_30()
+local script = G2L["30"];
 	local __originalnamecall
 	local currentremote = nil
 	
+	local module = (isfile and loadfile and isfile("Highlight.lua") and loadfile("Highlight.lua")()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/Highlight.lua"))()
+	
+	local Highlighter = module.new(script.Parent.CodeFrame)
+	
+	local NIL = newproxy(true)
+	
+	local scheduled = {}
+	
+	local settings = {
+		running = true
+	}
+	
 	local remoteStation = {
+		logged = setmetatable({}, {__mode = "k"}),
 		blockedName = {},
 		blockedInstance = {}
 	}
@@ -414,7 +611,7 @@ local function GFFOIP_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.Cl
 			clone.Parent = script.Parent.Blocks.scroll
 			clone.Name = R_INS
 			clone.rname.Text = R_INS
-			clone.click.Text = "Unblock [N]"
+			clone.click.Text = "Unblock N"
 			clone.click.MouseButton1Click:Connect(function()
 				remoteStationHelper.UnblockName(R_INS)
 				clone:Destroy()
@@ -432,7 +629,7 @@ local function GFFOIP_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.Cl
 			clone.Parent = script.Parent.Blocks.scroll
 			clone.Name = R_INS.Name
 			clone.rname.Text = R_INS.Name
-			clone.click.Text = "Unblock [Ins]"
+			clone.click.Text = "Unblock Ins"
 			clone.click.MouseButton1Click:Connect(function()
 				remoteStationHelper.UnblockInstance(R_INS)
 				clone:Destroy()
@@ -441,10 +638,120 @@ local function GFFOIP_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.Cl
 		end
 	end
 	
-	__originalnamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
-		local method = getnamecallmethod()
+	function remoteStationHelper.CreateRButton(self, args)
+		-- // ui side
+		if not remoteStation.blockedName[self.Name] and not remoteStation.blockedInstance[self] then
+			local clone = script.Parent.Remotes.scroll.Template:Clone()
+			clone.Parent = script.Parent.Remotes.scroll
+			clone.Name = self.Name
+			clone.rname.Text = self.Name
+			clone.LayoutOrder = -os.clock()
 	
-		if (method == "FireServer" or method == "fireServer") or (method == "InvokeServer" or method == "invokeServer") then
+			clone.click.MouseButton1Click:Connect(function()
+				currentremote = self
+	
+				for _, v in pairs(script.Parent.ArgumentSetter.scroll:GetChildren()) do
+					if v.Name ~= "Template" and v:IsA("Frame") then
+						v:Destroy()
+					end
+				end
+	
+				if args.n > 0 then
+					for idx = 1, args.n do
+						local v = args[idx]
+	
+						local argclone = script.Parent.ArgumentSetter.scroll.Template:Clone()
+						argclone.Parent = script.Parent.ArgumentSetter.scroll
+						argclone.Name = tostring(v)
+						argclone.input.PlaceholderText = tostring(v)
+						argclone.type.Text = typeof(v)
+						argclone.input.FocusLost:Connect(function()
+							if remoteStation.logged[self] then
+	
+								if typeof(v) == "number" then
+									remoteStation.logged[self][idx] = tonumber(argclone.input.Text)
+								elseif typeof(v) == "string" then
+									remoteStation.logged[self][idx] = tostring(argclone.input.Text)
+								elseif typeof(v) == "boolean" then
+									remoteStation.logged[self][idx] = (argclone.input.Text == "true")
+								elseif typeof(v) == "Vector3" then
+									local x, y, z = argclone.input.Text:match("([^,]+),([^,]+),([^,]+)")
+									remoteStation.logged[self][idx] = Vector3.new(tonumber(x), tonumber(y), tonumber(z))
+								elseif typeof(v) == "Vector2" then
+									local x, y = argclone.input.Text:match("([^,]+),([^,]+)")
+									remoteStation.logged[self][idx] = Vector2.new(tonumber(x), tonumber(y))
+								elseif typeof(v) == "Color3" then
+									if argclone.input.Text:lower():match("^hsv") then
+										local h,s,v = argclone.input.Text:lower():match("hsv%(([^,]+),([^,]+),([^,]+)%)")
+										h,s,v = tonumber(h), tonumber(s), tonumber(v)
+	
+										if h and s and v then
+											remoteStation.logged[self][idx] = Color3.fromHSV(h, s, v)
+										end
+									else
+										local r,g,b = argclone.input.Text:lower():match("%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^,]+)%s*")
+										r,g,b = tonumber(r), tonumber(g), tonumber(b)
+	
+										if r and g and b then
+											if r > 1 or g > 1 or b > 1 then
+												remoteStation.logged[self][idx] = Color3.fromRGB(r, g, b)
+											else
+												remoteStation.logged[self][idx] = Color3.new(r, g, b)
+											end
+										end
+									end
+								elseif typeof(v) == "CFrame" then
+									local nums = {}
+	
+									for n in string.gmatch(argclone.input.Text, "[^,]+") do
+										table.insert(nums, tonumber(n))
+									end
+	
+									if #nums >= 3 then
+										local cf = CFrame.new(nums[1], nums[2], nums[3])
+	
+										if #nums >= 6 then
+											cf *= CFrame.Angles(
+												math.rad(nums[4]),
+												math.rad(nums[5]),
+												math.rad(nums[6])
+											)
+										end
+	
+										remoteStation.logged[self][idx] = cf
+									end
+								end
+	
+	
+							end
+						end)
+						argclone.Visible = true
+					end
+				end
+			end)
+			clone.Visible = true
+		end
+	end
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if #scheduled > 0 then
+			local item = table.remove(scheduled, 1)
+			remoteStationHelper.CreateRButton(item.self, item.args)
+		end
+	end)
+	
+	__originalnamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+		
+		-- check if running
+		
+		if not settings.running then
+			return __originalnamecall(self, ...)
+		end
+		
+		local method = getnamecallmethod()
+		local args = table.pack(...)
+	
+		if method == "FireServer" or method == "InvokeServer" then
 			
 			-- checks / checkcaller() check
 			if getgenv().HapticSpySettings.logcheckcaller then
@@ -458,25 +765,20 @@ local function GFFOIP_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.Cl
 				return
 			end
 	
-			-- checks / blockedName check
-			if remoteStation.blockedName[self.Name] then
-				return __originalnamecall(self, ...)
+			
+			-- check if any args edited
+			if remoteStation.logged[self] then
+				for idx, v in pairs(remoteStation.logged[self]) do
+					args[idx] = v
+				end
+			else
+				remoteStation.logged[self] = {}
 			end
 			
-			-- // ui side
-			if not remoteStation.blockedName[self] or remoteStation.blockedInstance[self] then
-				local clone = script.Parent.Remotes.scroll.Template:Clone()
-				clone.Parent = script.Parent.Remotes.scroll
-				clone.Name = self.Name
-				clone.rname.Text = self.Name
-				clone.LayoutOrder = -tick()
-				clone.click.MouseButton1Click:Connect(function()
-					currentremote = self
-				end)
-				clone.Visible = true
-			end
+			table.insert(scheduled, {self = self, args = args})
+			
 		end
-		return __originalnamecall(self, ...)
+		return __originalnamecall(self, table.unpack(args, 1, args.n))
 	end))
 	
 	script.Parent.Buttons.BlockN.MouseButton1Click:Connect(function()
@@ -492,63 +794,27 @@ local function GFFOIP_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.Cl
 			currentremote = nil
 		end
 	end)
-end
-local function DBAXH_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.RButtons.Remotes.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Remotes1"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Remotes.Visible = true
-		script.Parent.Parent.Parent.Blocks.Visible = false
+	
+	script.Parent.Buttons.ClearLogs.MouseButton1Click:Connect(function()
+		for _, v in pairs(script.Parent.Remotes.scroll:GetChildren()) do
+			if v.Name ~= "Template" and v:IsA("Frame") then
+				v:Destroy()
+			end
+		end
+		
+		for _, v in pairs(script.Parent.ArgumentSetter.scroll:GetChildren()) do
+			if v.Name ~= "Template" and v:IsA("Frame") then
+				v:Destroy()
+			end
+		end
 	end)
-end
-local function ZXZBQF_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.RButtons.Blocks.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Blocks"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Blocks.Visible = true
-		script.Parent.Parent.Parent.Remotes.Visible = false
+	
+	script.Parent.State.MouseButton1Click:Connect(function()
+		settings.running = not settings.running
+		script.Parent.State.Text = (settings.running == true) and "Running" or "Disabled"
+		script.Parent.State.BackgroundColor3 = (settings.running == true) and Color3.fromRGB(0, 125, 0) or Color3.fromRGB(125, 0, 0)
 	end)
-end
-local function HWUQEL_fake_script() -- Fake Script: StarterGui.HapticSpy.Main.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Main"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+end;
+task.spawn(C_30);
 
-	script.Parent.Active = true
-	script.Parent.Selectable = true
-	script.Parent.Draggable = true
-end
-
-coroutine.wrap(JXATQN_fake_script)()
-coroutine.wrap(GFFOIP_fake_script)()
-coroutine.wrap(DBAXH_fake_script)()
-coroutine.wrap(ZXZBQF_fake_script)()
-coroutine.wrap(HWUQEL_fake_script)()
+return G2L["1"], require;
